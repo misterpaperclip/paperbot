@@ -4,9 +4,9 @@
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "cross-env NODE_ENV=development nodemon index": {
-      "name": "cross-env NODE_ENV=development nodemon index",
-      "command": "cross-env NODE_ENV=development nodemon index",
+    "startup": {
+      "name": "start bot",
+      "command": "node .",
       "runAtStart": true
     }
   }
