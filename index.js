@@ -27,8 +27,12 @@ const path = require("path");
     try {
       await command.execute(interaction, client);
       console.log(
-        `${interaction.commandName} was used by @${interaction.user.tag} in Channel: ${interaction[0]}.`
+        `${interaction.commandName} was used by @${interaction.user.tag} in Channel: ${interaction.channelId}.`
       );
+      /*client.send({
+        channelId: 1005367620633116773,
+        content: `@${interaction.user.tag} used ${interaction.commandName}`,
+      });*/
     } catch (error) {
       await interaction.reply({
         content: "There was an error while executing your command!" + error,
