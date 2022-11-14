@@ -46,5 +46,5 @@ const path = require("path");
     client.commands.set(command.data.name, command);
   }
 
-  client.login(discordToken);
+  client.login(process.env.TOKEN_VAR);
 })();

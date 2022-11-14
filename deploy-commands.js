@@ -1,7 +1,7 @@
 const { REST } = require("@discordjs/rest");
 const fs = require("fs");
 const path = require("path");
-const { discordToken, clientId } = require("./config.json");
+// const { discordToken, clientId } = require("./config.json");
 const { Routes } = require("discord-api-types/v9");
 console.log(
   "Credentials loaded and commands are now being pushed to the discord servers!"
@@ -17,6 +17,6 @@ exports.initializeCommands = async () => {
     commands.push(command.data.toJSON());
   }
 
-  const rest = new REST({ version: "9" }).setToken(discordToken);
-  await rest.put(Routes.applicationCommands(clientId), { body: commands });
+  const rest = new REST({ version: "9" }).setToken(process.env.TOKEN_VAR);
+  await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: commands });
 };
