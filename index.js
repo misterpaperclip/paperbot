@@ -1,5 +1,5 @@
 const { Client, Intents, Collection } = require("discord.js");
-const { discordToken } = require("./config.json");
+// const { discordToken } = require("./config.json");
 const { initializeCommands } = require("./deploy-commands");
 const client = new Client({ intents: 8 });
 const fs = require("fs");
